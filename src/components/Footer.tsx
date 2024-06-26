@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="bg-[#101010] flex justify-center items-center">
+      <div className="w-full bg-[#101010] flex justify-center items-center">
         <footer>
           <div className="flex justify-center items-center flex-col">
             <svg
@@ -36,7 +36,7 @@ export default function Footer() {
               Copyright 2021. All Rights Reserved
             </span>
             <svg
-            className="mb-[38px]"
+              className="mb-[38px]"
               xmlns="http://www.w3.org/2000/svg"
               width="104"
               height="24"
