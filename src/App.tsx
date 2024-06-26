@@ -4,6 +4,7 @@ import Items from "./components/Items";
 import SpeakerZX9 from "./components/SpeakerCard";
 import ZX7Speaker from "./components/ZX7Speaker";
 import YX1EarPhones from "./components/YX1EarPhones";
+import AboutComoany from "./components/AboutComoany";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <SpeakerZX9 />
       <ZX7Speaker />
       <YX1EarPhones />
+      <AboutComoany />
     </>
   );
 }
