@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Items from "./components/Items";
 import SpeakerZX9 from "./components/SpeakerCard";
+import ZX7Speaker from "./components/ZX7Speaker";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Items />
       <SpeakerZX9 />
+      <ZX7Speaker />
     </>
   );
 }
