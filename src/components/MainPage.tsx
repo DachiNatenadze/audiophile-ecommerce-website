@@ -5,6 +5,7 @@ import Items from "./Items";
 import YX1EarPhones from "./YX1EarPhones";
 import ZX7Speaker from "./ZX7Speaker";
 import Header from "./Header";
+import SpeakerCard from "./SpeakerCard";
 
 export default function MainPage() {
   console.log("rendered");
@@ -15,6 +16,7 @@ export default function MainPage() {
         <HeadphoneInfo />
       </div>
       <Items />
+      <SpeakerCard />
       <ZX7Speaker />
       <YX1EarPhones />
       <AboutComoany />
