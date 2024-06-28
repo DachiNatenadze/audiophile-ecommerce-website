@@ -3,9 +3,11 @@ import Header from "../components/Header";
 import zx9 from "/product-zx9-speaker/mobile/image-category-page-preview.jpg";
 import xx59 from "/product-xx59-headphones/mobile/image-category-page-preview.jpg";
 import xx99markI from "/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg";
-import HeadstenonLegs from "/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg";
+import xx99MarkII from "/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg";
+import HeadstenonLegs from "/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg";
 import headset from "/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg";
-import autohor from "/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg";
+
+import autohor from "/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg";
 
 import { MyContext } from "../Layouts";
 import Items from "../components/Items";
@@ -13,12 +15,13 @@ import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
-export default function XX99MarkIIProducts() {
-  const { XX99Price, XX99qnty, setXX99qnty } = useContext(MyContext);
+export default function XX99MarkIProducts() {
+  const { XX99Iqnty, setXXI99qnty, XX99IPrice } = useContext(MyContext);
+  2;
   const handleDecrement = () => {
     // Ensure qnty doesn't go below 0
-    if (XX99qnty > 0) {
-      setXX99qnty(XX99qnty - 1);
+    if (XX99Iqnty > 0) {
+      setXXI99qnty(XX99Iqnty - 1);
     }
   };
   return (
@@ -34,17 +37,18 @@ export default function XX99MarkIIProducts() {
                 Go Back
               </span>
             </Link>
-            <img src={xx99markI} alt="" />
+            <img src={xx99MarkII} alt="" />
             <h2 className="text-[#000] mt-[24px] mb-[24px] font-[Manrope] text-[28px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              XX99 Mark II Headphones
+              XX99 Mark I Headphones
             </h2>
             <p className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50">
-              The new XX99 Mark II headphones is the pinnacle of pristine audio.
-              It redefines your premium headphone experience by reproducing the
-              balanced depth and precision of studio-quality sound.
+              As the gold standard for headphones, the classic XX99 Mark I
+              offers detailed and accurate audio reproduction for audiophiles,
+              mixing engineers, and music aficionados alike in studios and on
+              the go.
             </p>
-            <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase">
-              ${XX99Price}
+            <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
+              ${XX99IPrice}
             </h2>
             <div className="">
               <button
@@ -53,12 +57,12 @@ export default function XX99MarkIIProducts() {
                 -
               </button>
               <span className="w-[16px] text-[#000] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-                {XX99qnty}
+                {XX99Iqnty}
               </span>
               <button
                 className="w-[16px] opacity-25 ml-[21px] mr-[21px]"
                 onClick={() => {
-                  setXX99qnty(XX99qnty + 1);
+                  setXXI99qnty(XX99Iqnty + 1);
                 }}>
                 +
               </button>
@@ -70,21 +74,20 @@ export default function XX99MarkIIProducts() {
               FEATURES
             </h2>
             <p className="mb-[24px] mt-[24px] text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50">
-              Featuring a genuine leather head strap and premium earcups, these
-              headphones deliver superior comfort for those who like to enjoy
-              endless listening. It includes intuitive controls designed for any
-              situation. Whether you’re taking a business call or just in your
-              own personal space, the auto on/off and pause features ensure that
-              you’ll never miss a beat.
+              As the headphones all others are measured against, the XX99 Mark I
+              demonstrates over five decades of audio expertise, redefining the
+              critical listening experience. This pair of closed-back headphones
+              are made of industrial, aerospace-grade materials to emphasize
+              durability at a relatively light weight of 11 oz.
             </p>
             <p className=" text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50">
-              The advanced Active Noise Cancellation with built-in equalizer
-              allow you to experience your audio world on your terms. It lets
-              you enjoy your audio in peace, but quickly interact with your
-              surroundings when you need to. Combined with Bluetooth 5. 0
-              compliant connectivity and 17 hour battery life, the XX99 Mark II
-              headphones gives you superior sound, cutting-edge technology, and
-              a modern design aesthetic.
+              From the handcrafted microfiber ear cushions to the robust metal
+              headband with inner damping element, the components work together
+              to deliver comfort and uncompromising sound. Its closed-back
+              design delivers up to 27 dB of passive noise cancellation,
+              reducing resonance by reflecting sound to a dedicated absorber.
+              For connectivity, a specially tuned cable is included with a
+              balanced gold connector.
             </p>
 
             <h2 className="text-[#000] font-[Manrope] text-[24px] not-italic font-bold leading-[36px] uppercase mt-[88px]">

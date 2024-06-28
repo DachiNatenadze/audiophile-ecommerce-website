@@ -1,6 +1,7 @@
 import Headphones from "/product-xx99-mark-one-headphones/mobile/image-product.jpg";
 import Speaker from "/product-zx9-speaker/mobile/image-category-page-preview.jpg";
 import Earphone from "/product-yx1-earphones/mobile/image-category-page-preview.jpg";
+import { Link } from "react-router-dom";
 
 export default function Items() {
   return (
@@ -18,9 +19,11 @@ export default function Items() {
             </h2>
           </div>
           <div className="flex flex-row items-center justify-center mt-[18px] gap-3">
-            <span className="text-[#000] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase opacity-50">
-              Shop
-            </span>
+            <Link to={"/Headphones"}>
+              <span className="text-[#000] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase opacity-50">
+                Shop
+              </span>
+            </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="8"
