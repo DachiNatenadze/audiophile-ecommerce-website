@@ -11,4 +11,8 @@ export type ProductsType = {
   setXX59qnty: React.Dispatch<React.SetStateAction<number>>;
   XX59Price: number;
   setXX59Price: React.Dispatch<React.SetStateAction<number>>;
+  ZX9Price: number;
+  setZX9Price: React.Dispatch<React.SetStateAction<number>>;
+  ZX9Qnty: number;
+  setZX9Qnty: React.Dispatch<React.SetStateAction<number>>;
 };
