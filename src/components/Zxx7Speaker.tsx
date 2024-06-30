@@ -1,6 +1,6 @@
 import ZX7SpeakerImage from "/product-zx7-speaker/mobile/Bitmap.png";
 
-export default function Zx7Speaker() {
+export default function Zxx7Speaker() {
   return (
     <>
       <main>

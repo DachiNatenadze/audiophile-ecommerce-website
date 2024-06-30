@@ -11,6 +11,7 @@ import XX59Headphone from "./Pages/xx59Headphone";
 import { ProductsType } from "./types";
 import ZX9Speaker from "./Pages/ZX9Speaker";
 import ZX7Speaker from "./Pages/ZX7Speaker";
+import YX1EarPhones from "./Pages/YX1Earphones";
 export const MyContext = createContext<ProductsType>({
   XX99qnty: 0,
   setXX99qnty: () => {},
@@ -32,6 +33,10 @@ export const MyContext = createContext<ProductsType>({
   setZX7Price: () => {},
   ZX7Qnty: 0,
   setZX7Qnty: () => {},
+  YX1Price: 599,
+  YX1Qnty: 0,
+  setYX1Qnty: () => {},
+  setYX1Price: () => {},
 });
 
 export default function Layouts() {
@@ -45,11 +50,17 @@ export default function Layouts() {
   const [ZX9Qnty, setZX9Qnty] = useState<number>(0);
   const [ZX7Price, setZX7Price] = useState<number>(4500);
   const [ZX7Qnty, setZX7Qnty] = useState<number>(0);
+  const [YX1Price, setYX1Price] = useState<number>(599);
+  const [YX1Qnty, setYX1Qnty] = useState<number>(0);
   return (
     <>
       <BrowserRouter>
         <MyContext.Provider
           value={{
+            YX1Price,
+            YX1Qnty,
+            setYX1Qnty,
+            setYX1Price,
             ZX7Price,
             setZX7Price,
             ZX7Qnty,
@@ -81,6 +92,7 @@ export default function Layouts() {
             <Route path="/XX59Headphone" element={<XX59Headphone />} />
             <Route path="/ZX9Speaker" element={<ZX9Speaker />} />
             <Route path="/ZX7Speaker" element={<ZX7Speaker />} />
+            <Route path="/YX1Earphones" element={<YX1EarPhones />} />
           </Routes>
         </MyContext.Provider>
       </BrowserRouter>

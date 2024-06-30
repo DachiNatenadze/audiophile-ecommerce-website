@@ -2,8 +2,8 @@ import AboutComoany from "./AboutComoany";
 import Footer from "./Footer";
 import HeadphoneInfo from "./HeadphoneInfo";
 import Items from "./Items";
-import YX1EarPhones from "./YX1EarPhones";
-import Zx7Speaker from "./Zx7Speaker";
+import YXX1EarPhones from "./YXX1EarPhones";
+import Zxx7Speaker from "./Zxx7Speaker";
 import Header from "./Header";
 import SpeakerCard from "./SpeakerCard";
 
@@ -17,8 +17,8 @@ export default function MainPage() {
       </div>
       <Items />
       <SpeakerCard />
-      <Zx7Speaker />
-      <YX1EarPhones />
+      <Zxx7Speaker />
+      <YXX1EarPhones />
       <AboutComoany />
       <Footer />
     </>
