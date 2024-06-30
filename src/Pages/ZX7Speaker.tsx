@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import Header from "../components/Header";
-import zx9 from "/product-zx9-speaker/mobile/image-category-page-preview.jpg";
-import xx59 from "/product-xx59-headphones/mobile/image-category-page-preview.jpg";
-import xx99markI from "/product-xx59-headphones/mobile/image-category-page-preview.jpg";
 import zx7 from "/product-zx7-speaker/mobile/image-category-page-preview.jpg";
-import HeadstenonLegs from "/product-zx9-speaker/mobile/image-gallery-2.jpg";
-import headset from "/product-zx9-speaker/mobile/image-gallery-3.jpg";
-
-import autohor from "/product-zx9-speaker/mobile/image-gallery-1.jpg";
+import xx59 from "/product-xx59-headphones/mobile/image-category-page-preview.jpg";
+import xx99markI from "/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg";
+import zx9 from "/product-zx9-speaker/mobile/image-category-page-preview.jpg";
+import HeadstenonLegs from "/product-zx7-speaker/mobile/image-gallery-2.jpg";
+import headset from "/product-zx7-speaker/mobile/image-gallery-3.jpg";
+import autohor from "/product-zx7-speaker/mobile/image-gallery-1.jpg";
 
 import { MyContext } from "../Layouts";
 import Items from "../components/Items";
@@ -15,13 +14,13 @@ import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
-export default function ZX9Speaker () {
-  const { ZX9Price, ZX9Qnty, setZX9Qnty } = useContext(MyContext);
+export default function ZX7Speaker() {
+  const { ZX7Price, ZX7Qnty, setZX7Qnty } = useContext(MyContext);
   2;
   const handleDecrement = () => {
     // Ensure qnty doesn't go below 0
-    if (ZX9Qnty > 0) {
-      setZX9Qnty(ZX9Qnty - 1);
+    if (ZX7Qnty > 0) {
+      setZX7Qnty(ZX7Qnty - 1);
     }
   };
   return (
@@ -37,18 +36,17 @@ export default function ZX9Speaker () {
                 Go Back
               </span>
             </Link>
-            <img src={zx9} alt="" />
+            <img src={zx7} alt="" />
             <h2 className="text-[#000] mt-[24px] mb-[24px] font-[Manrope] text-[28px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              ZX9 SPEAKER
+              ZX7 SPEAKER
             </h2>
             <p className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50">
-              Upgrade your sound system with the all new ZX9 active speaker.
-              It’s a bookshelf speaker system that offers truly wireless
-              connectivity -- creating new possibilities for more pleasing and
-              practical audio setups.
+              Stream high quality sound wirelessly with minimal to no loss. The
+              ZX7 speaker uses high-end audiophile components that represents
+              the top of the line powered speakers for home or studio use.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
-              ${ZX9Price}
+              ${ZX7Price}
             </h2>
             <div className="">
               <button
@@ -57,12 +55,12 @@ export default function ZX9Speaker () {
                 -
               </button>
               <span className="w-[16px] text-[#000] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-                {ZX9Qnty}
+                {ZX7Qnty}
               </span>
               <button
                 className="w-[16px] opacity-25 ml-[21px] mr-[21px]"
                 onClick={() => {
-                  setZX9Qnty(ZX9Qnty + 1);
+                  setZX7Qnty(ZX7Qnty + 1);
                 }}>
                 +
               </button>
@@ -74,27 +72,20 @@ export default function ZX9Speaker () {
               FEATURES
             </h2>
             <p className="mb-[24px] mt-[24px] text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50">
-              Connect via Bluetooth or nearly any wired source. This speaker
-              features optical, digital coaxial, USB Type-B, stereo RCA, and
-              stereo XLR inputs, allowing you to have up to five wired source
-              devices connected for easy switching. Improved bluetooth
-              technology offers near lossless audio quality at up to 328ft
-              (100m).
+              Reap the advantages of a flat diaphragm tweeter cone. This
+              provides a fast response rate and excellent high frequencies that
+              lower tiered bookshelf speakers cannot provide. The woofers are
+              made from aluminum that produces a unique and clear sound. XLR
+              inputs allow you to connect to a mixer for more advanced usage.
             </p>
             <p className=" text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50">
-              Discover clear, more natural sounding highs than the competition
-              with ZX9’s signature planar diaphragm tweeter. Equally important
-              is its powerful room-shaking bass courtesy of a 6.5” aluminum
-              alloy bass unit. You’ll be able to enjoy equal sound quality
-              whether in a large room or small den. Furthermore, you will
-              experience new sensations from old songs since it can respond to
-              even the subtle waveforms.Discover clear, more natural sounding
-              highs than the competition with ZX9’s signature planar diaphragm
-              tweeter. Equally important is its powerful room-shaking bass
-              courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to
-              enjoy equal sound quality whether in a large room or small den.
-              Furthermore, you will experience new sensations from old songs
-              since it can respond to even the subtle waveforms.
+              The ZX7 speaker is the perfect blend of stylish design and high
+              performance. It houses an encased MDF wooden enclosure which
+              minimises acoustic resonance. Dual connectivity allows pairing
+              through bluetooth or traditional optical and RCA input. Switch
+              input sources and control volume at your finger tips with the
+              included wireless remote. This versatile speaker is equipped to
+              deliver an authentic listening experience.
             </p>
 
             <h2 className="text-[#000] font-[Manrope] text-[24px] not-italic font-bold leading-[36px] uppercase mt-[88px]">
@@ -103,15 +94,15 @@ export default function ZX9Speaker () {
 
             <div className="flex flex-col mt-[24px]">
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] ">
-                1x
+                2x
                 <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50 ml-[24px]">
-                  Headphone Unit
+                  Speaker Unit
                 </span>
               </span>
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] ">
                 2x
                 <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50 ml-[24px]">
-                  Replacement Earcups
+                  Speaker Cloth Panel
                 </span>
               </span>
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px]">
@@ -129,7 +120,7 @@ export default function ZX9Speaker () {
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] ">
                 1x
                 <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50 ml-[24px]">
-                  Travel Bag
+                  7.5m Optical Cable
                 </span>
               </span>
             </div>
@@ -154,9 +145,9 @@ export default function ZX9Speaker () {
               <h2 className="text-[#000] text-center font-[Manrope] text-[24px] not-italic font-bold leading-[36px] uppercase mt-[120px] mb-[40px]">
                 you may also like
               </h2>
-              <img src={zx7} alt="" />
+              <img src={zx9} alt="" />
               <h2 className="text-[#000] text-center font-[Manrope] text-[24px] not-italic font-bold leading-[normal] tracking-[1.714px] uppercase mb-[32px]">
-                ZX7 SPEAKER
+                ZX9 SPEAKER
               </h2>
               <button className="w-[160px] h-[48px] flex-shrink-0 bg-[#D87D4A] text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
                 See Product
@@ -174,13 +165,6 @@ export default function ZX9Speaker () {
                 XX59
               </h2>
               <button className="w-[160px] h-[48px] flex-shrink-0 bg-[#D87D4A] text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase mb-[50px]">
-                See Product
-              </button>
-              <img src={zx9} alt="" />
-              <h2 className="text-[#000] text-center font-[Manrope] text-[24px] not-italic font-bold leading-[normal] tracking-[1.714px] uppercas mb-[32px] ">
-                ZX9 SPEAKER
-              </h2>
-              <button className="w-[160px] h-[48px] flex-shrink-0 bg-[#D87D4A] text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase mb-[120px]">
                 See Product
               </button>
             </div>

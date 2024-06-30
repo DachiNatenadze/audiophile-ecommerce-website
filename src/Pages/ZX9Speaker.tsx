@@ -15,7 +15,7 @@ import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
-export default function XX59Headphone() {
+export default function ZX9Speaker() {
   const { ZX9Price, ZX9Qnty, setZX9Qnty } = useContext(MyContext);
   2;
   const handleDecrement = () => {
@@ -105,13 +105,13 @@ export default function XX59Headphone() {
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] ">
                 1x
                 <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50 ml-[24px]">
-                  Headphone Unit
+                  Speaker Unit
                 </span>
               </span>
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] ">
                 2x
                 <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50 ml-[24px]">
-                  Replacement Earcups
+                  Speaker Cloth Panel
                 </span>
               </span>
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px]">
@@ -129,7 +129,7 @@ export default function XX59Headphone() {
               <span className="text-[#D87D4A] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] ">
                 1x
                 <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-normal leading-[25px] opacity-50 ml-[24px]">
-                  Travel Bag
+                  10m Optical Cable
                 </span>
               </span>
             </div>

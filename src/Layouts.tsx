@@ -10,6 +10,7 @@ import XX59Headphone from "./Pages/xx59Headphone";
 
 import { ProductsType } from "./types";
 import ZX9Speaker from "./Pages/ZX9Speaker";
+import ZX7Speaker from "./Pages/ZX7Speaker";
 export const MyContext = createContext<ProductsType>({
   XX99qnty: 0,
   setXX99qnty: () => {},
@@ -23,26 +24,36 @@ export const MyContext = createContext<ProductsType>({
   setXX59qnty: () => {},
   XX59Price: 899,
   setXX59Price: () => {},
-  ZX9Price: 4.5,
+  ZX9Price: 4500,
   setZX9Price: () => {},
   ZX9Qnty: 0,
   setZX9Qnty: () => {},
+  ZX7Price: 4500,
+  setZX7Price: () => {},
+  ZX7Qnty: 0,
+  setZX7Qnty: () => {},
 });
 
 export default function Layouts() {
-  const [XX99Price, setXX99Price] = useState<number>(2.999);
+  const [XX99Price, setXX99Price] = useState<number>(2999);
   const [XX99IPrice, setXX99IPrice] = useState<number>(1750);
   const [XX99Iqnty, setXXI99qnty] = useState<number>(0);
   const [XX99qnty, setXX99qnty] = useState<number>(0);
   const [XX59qnty, setXX59qnty] = useState<number>(0);
   const [XX59Price, setXX59Price] = useState<number>(899);
-  const [ZX9Price, setZX9Price] = useState<number>(4.5);
+  const [ZX9Price, setZX9Price] = useState<number>(4500);
   const [ZX9Qnty, setZX9Qnty] = useState<number>(0);
+  const [ZX7Price, setZX7Price] = useState<number>(4500);
+  const [ZX7Qnty, setZX7Qnty] = useState<number>(0);
   return (
     <>
       <BrowserRouter>
         <MyContext.Provider
           value={{
+            ZX7Price,
+            setZX7Price,
+            ZX7Qnty,
+            setZX7Qnty,
             ZX9Price,
             ZX9Qnty,
             setZX9Qnty,
@@ -69,6 +80,7 @@ export default function Layouts() {
             <Route path="/XX99Mark1Product" element={<XX99MarkIProducts />} />
             <Route path="/XX59Headphone" element={<XX59Headphone />} />
             <Route path="/ZX9Speaker" element={<ZX9Speaker />} />
+            <Route path="/ZX7Speaker" element={<ZX7Speaker />} />
           </Routes>
         </MyContext.Provider>
       </BrowserRouter>
