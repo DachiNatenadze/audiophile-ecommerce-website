@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import zx9 from "/product-zx9-speaker/mobile/image-category-page-preview.jpg";
 import xx59 from "/product-xx59-headphones/mobile/image-category-page-preview.jpg";
 import xx99markI from "/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg";
+import xx99markII from "/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg";
 import HeadstenonLegs from "/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg";
 import headset from "/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg";
 import autohor from "/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg";
@@ -34,7 +35,7 @@ export default function XX99MarkIIProducts() {
                 Go Back
               </span>
             </Link>
-            <img src={xx99markI} alt="" />
+            <img src={xx99markII} alt="" />
             <h2 className="text-[#000] mt-[24px] mb-[24px] font-[Manrope] text-[28px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
               XX99 Mark II Headphones
             </h2>

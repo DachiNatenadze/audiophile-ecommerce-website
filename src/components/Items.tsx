@@ -51,9 +51,11 @@ export default function Items() {
             </h2>
           </div>
           <div className="flex flex-row items-center justify-center mt-[18px] gap-3">
-            <span className="text-[#000] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase opacity-50">
-              Shop
-            </span>
+            <Link to={"/Speaker"}>
+              <span className="text-[#000] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase opacity-50">
+                Shop
+              </span>
+            </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="8"
@@ -81,9 +83,11 @@ export default function Items() {
             </h2>
           </div>
           <div className="flex flex-row items-center justify-center mt-[18px] gap-3">
-            <span className="text-[#000] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase opacity-50">
-              Shop
-            </span>
+            <Link to={"/Earphones"}>
+              <span className="text-[#000] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase opacity-50">
+                Shop
+              </span>
+            </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="8"

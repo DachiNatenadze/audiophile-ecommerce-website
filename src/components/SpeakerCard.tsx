@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SpeakerPic from "/product-zx9-speaker/mobile/image-removebg-preview(38).png";
 export default function SpeakerCard() {
   return (
@@ -13,9 +14,11 @@ export default function SpeakerCard() {
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <button className="w-[160px] h-[48px] flex-shrink-0 bg-[#000] text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              See Product
-            </button>
+            <Link to={"/ZX9Speaker"}>
+              <button className="w-[160px] h-[48px] flex-shrink-0 bg-[#000] text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+                See Product
+              </button>
+            </Link>
           </div>
         </div>
       </main>

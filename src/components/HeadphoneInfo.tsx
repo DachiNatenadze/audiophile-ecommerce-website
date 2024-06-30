@@ -17,7 +17,7 @@ export default function HeadphoneInfo() {
                 Experience natural, lifelike audio and exceptional build quality
                 made for the passionate music enthusiast.
               </p>
-              <Link to={"/XX99Mark2 Product"}>
+              <Link to={"/XX99Mark2Product"}>
                 <button className="w-[160px] h-[48px] flex-shrink-0 bg-[#D87D4A] text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
                   See Product
                 </button>

@@ -48,7 +48,7 @@ export default function Layouts() {
   const [XX59Price, setXX59Price] = useState<number>(899);
   const [ZX9Price, setZX9Price] = useState<number>(4500);
   const [ZX9Qnty, setZX9Qnty] = useState<number>(0);
-  const [ZX7Price, setZX7Price] = useState<number>(4500);
+  const [ZX7Price, setZX7Price] = useState<number>(3500);
   const [ZX7Qnty, setZX7Qnty] = useState<number>(0);
   const [YX1Price, setYX1Price] = useState<number>(599);
   const [YX1Qnty, setYX1Qnty] = useState<number>(0);

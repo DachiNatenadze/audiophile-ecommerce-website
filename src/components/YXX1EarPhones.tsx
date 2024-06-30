@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import YX1EarPhoneImg from "/product-yx1-earphones/mobile/image-gallery-2.jpg";
 export default function YX1EarPhones() {
   return (
@@ -13,9 +14,11 @@ export default function YX1EarPhones() {
             <h2 className="ml-[24px] mt-[65px] mb-[32px] text-[#000] font-[Manrope] text-[28px] not-italic font-bold leading-[normal] tracking-[2px] uppercase">
               YX1 EARPHONES
             </h2>
-            <button className="ml-[24px] border-[1px] border-[solid] border-[#000] w-[160px] h-[48px] flex-shrink-0 mb-[165px]">
-              SEE PRODUCT
-            </button>
+            <Link to={"/YX1Earphones"}>
+              <button className="ml-[24px] border-[1px] border-[solid] border-[#000] w-[160px] h-[48px] flex-shrink-0 mb-[165px]">
+                SEE PRODUCT
+              </button>
+            </Link>
           </div>
         </div>
       </main>

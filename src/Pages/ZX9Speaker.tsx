@@ -16,12 +16,12 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export default function ZX9Speaker() {
-  const { YX1Price, YX1Qnty, setYX1Qnty } = useContext(MyContext);
-  
+  const { ZX9Price, ZX9Qnty, setZX9Qnty } = useContext(MyContext);
+  2;
   const handleDecrement = () => {
     // Ensure qnty doesn't go below 0
-    if (YX1Qnty > 0) {
-      setYX1Qnty(YX1Qnty - 1);
+    if (ZX9Qnty > 0) {
+      setZX9Qnty(ZX9Qnty - 1);
     }
   };
   return (
@@ -48,7 +48,7 @@ export default function ZX9Speaker() {
               practical audio setups.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
-              ${YX1Price}
+              ${ZX9Price}
             </h2>
             <div className="">
               <button
@@ -57,12 +57,12 @@ export default function ZX9Speaker() {
                 -
               </button>
               <span className="w-[16px] text-[#000] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-                {YX1Qnty}
+                {ZX9Qnty}
               </span>
               <button
                 className="w-[16px] opacity-25 ml-[21px] mr-[21px]"
                 onClick={() => {
-                  setYX1Qnty(YX1Qnty + 1);
+                  setZX9Qnty(ZX9Qnty + 1);
                 }}>
                 +
               </button>
