@@ -11,16 +11,18 @@ export default function MainPage() {
   console.log("rendered");
   return (
     <>
-      <div className="w-full h-full bg-headerBackground pb-[142px] bg-center bg-no-repeat bg-cover">
-        <Header />
-        <HeadphoneInfo />
-      </div>
-      <Items />
-      <SpeakerCard />
-      <Zxx7Speaker />
-      <YXX1EarPhones />
-      <AboutComoany />
-      <Footer />
+      <main className="w-ful">
+        <div className="w-full h-full bg-headerBackground pb-[142px] bg-center bg-no-repeat bg-cover">
+          <Header />
+          <HeadphoneInfo />
+        </div>
+        <Items />
+        <SpeakerCard />
+        <Zxx7Speaker />
+        <YXX1EarPhones />
+        <AboutComoany />
+        <Footer />
+      </main>
     </>
   );
 }

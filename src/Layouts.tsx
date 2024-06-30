@@ -37,6 +37,8 @@ export const MyContext = createContext<ProductsType>({
   YX1Qnty: 0,
   setYX1Qnty: () => {},
   setYX1Price: () => {},
+  isShowen: false,
+  setIsShowen: () => {},
 });
 
 export default function Layouts() {
@@ -52,11 +54,14 @@ export default function Layouts() {
   const [ZX7Qnty, setZX7Qnty] = useState<number>(0);
   const [YX1Price, setYX1Price] = useState<number>(599);
   const [YX1Qnty, setYX1Qnty] = useState<number>(0);
+  const [isShowen, setIsShowen] = useState<boolean>(false);
   return (
     <>
       <BrowserRouter>
         <MyContext.Provider
           value={{
+            setIsShowen,
+            isShowen,
             YX1Price,
             YX1Qnty,
             setYX1Qnty,

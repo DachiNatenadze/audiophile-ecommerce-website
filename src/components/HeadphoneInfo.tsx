@@ -6,7 +6,7 @@ export default function HeadphoneInfo() {
       <main>
         <section>
           <div>
-            <div className="flex flex-col justify-center items-center gap-4 max-sm:mt-[108px]">
+            <div className="flex flex-col justify-center items-center gap-4 max-sm:mt-[108px] z-0">
               <span className="text-[#FFF] text-center font-[Manrope] text-[14px] not-italic font-normal leading-[normal] tracking-[10px] uppercase opacity-50 mb-[8px]">
                 NEW PRODUCT
               </span>

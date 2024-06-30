@@ -1,9 +1,14 @@
-
-
+import { useContext } from "react";
+import { MyContext } from "../Layouts";
+import Menuburger from "./Menuburger";
 export default function Header() {
+  const { isShowen, setIsShowen } = useContext(MyContext);
+  function Cart() {
+    setIsShowen((prevIsShowen) => !prevIsShowen);
+  }
   return (
     <>
-      <header className="w-full border-b border-[#FFF] border-opacity-15">
+      <header className="w-full border-b border-[#FFF] border-opacity-15 justify-center items-center">
         <div className="flex flex-row justify-between items-center max-sm:pt-[37px] max-sm:px-[24px] max-sm:mb-[35px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +34,8 @@ export default function Header() {
               fill="white"
             />
           </svg>
-
           <svg
+            onClick={Cart}
             xmlns="http://www.w3.org/2000/svg"
             width="23"
             height="20"
@@ -44,6 +49,13 @@ export default function Header() {
             />
           </svg>
         </div>
+        {isShowen ? (
+          <div className="absolute w-full z-10">
+            <Menuburger />
+          </div>
+        ) : (
+          ""
+        )}
       </header>
     </>
   );
