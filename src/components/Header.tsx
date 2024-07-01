@@ -11,6 +11,7 @@ export default function Header() {
       <header className="w-full border-b border-[#FFF] border-opacity-15 justify-center items-center">
         <div className="flex flex-row justify-between items-center max-sm:pt-[37px] max-sm:px-[24px] max-sm:mb-[35px]">
           <svg
+            onClick={Cart}
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="15"
@@ -35,7 +36,6 @@ export default function Header() {
             />
           </svg>
           <svg
-            onClick={Cart}
             xmlns="http://www.w3.org/2000/svg"
             width="23"
             height="20"

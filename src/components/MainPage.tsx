@@ -6,6 +6,7 @@ import YXX1EarPhones from "./YXX1EarPhones";
 import Zxx7Speaker from "./Zxx7Speaker";
 import Header from "./Header";
 import SpeakerCard from "./SpeakerCard";
+import Cart from "./Cart";
 
 export default function MainPage() {
   console.log("rendered");
@@ -16,6 +17,7 @@ export default function MainPage() {
           <Header />
           <HeadphoneInfo />
         </div>
+        <Cart/>
         <Items />
         <SpeakerCard />
         <Zxx7Speaker />
