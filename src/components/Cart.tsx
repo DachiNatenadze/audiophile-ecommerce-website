@@ -1,4 +1,11 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import ProductList from "../Products.json";
+import ProdCart2 from "./Cart";
+
 export default function Cart() {
+  const [products, setProducts] = useState<[]>([]);
+  const [prodcart, setProdCart] = useState<[]>([]);
   return (
     <>
       <main>

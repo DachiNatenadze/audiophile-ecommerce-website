@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "XX99 MK IIs", "price": 2999 },
+  { "id": 2, "name": "XX99 Mark I", "price": 1750 },
+  { "id": 3, "name": "XX59", "price": 899 },
+  { "id": 4, "name": "ZX9", "price": 4500 },
+  { "id": 5, "name": "ZX7", "price": 3500 },
+  { "id": 6, "name": "YX1", "price": 599 }
+]

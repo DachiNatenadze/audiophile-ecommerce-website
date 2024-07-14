@@ -12,6 +12,7 @@ import { ProductsType } from "./types";
 import ZX9Speaker from "./Pages/ZX9Speaker";
 import ZX7Speaker from "./Pages/ZX7Speaker";
 import YX1EarPhones from "./Pages/YX1Earphones";
+import Input from "./Pages/Input";
 export const MyContext = createContext<ProductsType>({
   XX99qnty: 0,
   setXX99qnty: () => {},
@@ -98,6 +99,7 @@ export default function Layouts() {
             <Route path="/ZX9Speaker" element={<ZX9Speaker />} />
             <Route path="/ZX7Speaker" element={<ZX7Speaker />} />
             <Route path="/YX1Earphones" element={<YX1EarPhones />} />
+            <Route path="/input" element={<Input />} />
           </Routes>
         </MyContext.Provider>
       </BrowserRouter>
