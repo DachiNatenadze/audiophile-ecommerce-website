@@ -1,6 +1,15 @@
+import { useState } from "react";
 import Header from "../components/Header";
+import "./input.css";
 
 export default function Input() {
+  const [isShowed, setisShowed] = useState<boolean>(false);
+  function Change() {
+    setisShowed(!isShowed);
+  }
+  function Cash() {
+    setisShowed(false);
+  }
   return (
     <>
       <div className="bg-black">
@@ -70,6 +79,50 @@ export default function Input() {
               />
             </div>
           </div>
+          <h2 className="text-[#D87D4A] font-[Manrope] text-[13px] not-italic font-bold leading-[25px] uppercase mb-[16px] mt-[32px]">
+            payment details
+          </h2>
+          <h2 className="mb-[4px]">Payment Method</h2>
+          <div className="flex flex-col space-y-2">
+            <label className="flex items-center border-2 rounded-lg p-4 cursor-pointer">
+              <input
+                type="radio"
+                name="payment"
+                onClick={Change}
+                className="form-radio text-orange-500"
+                
+              />
+              <span className="ml-8">e-Money</span>
+            </label>
+            <label className="flex items-center border-2 rounded-lg p-4 cursor-pointer">
+              <input
+                type="radio"
+                name="payment"
+                onClick={Cash}
+                value="Cash on Delivery"
+                className="form-radio text-orange-500"
+              />
+              <span className="ml-8">Cash on Delivery</span>
+            </label>
+          </div>
+          {isShowed ? (
+            <div className="mt-[32px]">
+              <h2 className="mb-[9x]">e-Money Number</h2>
+              <input
+                type="number"
+                placeholder="238521993"
+                className="w-[280px] h-[56px] flex-shrink-0 rounded-[8px] border-[1px] border-[solid] border-[#FFF] bg-[#FFF] pl-6"
+              />
+              <h2 className="mb-[9x] mt-[24px]">e-Money PIN</h2>
+              <input
+                type="number"
+                placeholder="6891"
+                className="w-[280px] h-[56px] flex-shrink-0 rounded-[8px] border-[1px] border-[solid] border-[#FFF] bg-[#FFF] pl-6"
+              />
+            </div>
+          ) : (
+            ""
+          )}
         </section>
       </main>
     </>

@@ -1,0 +1,28 @@
+.payment-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.payment-option.selected {
+  border-color: orange;
+  background-color: #f9f9f9;
+} 
+
+.payment-option input {
+  margin-right: 10px;
+}
+
+.payment-option label {
+  cursor: pointer;
+}
