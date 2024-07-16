@@ -24,5 +24,14 @@ export type ProductsType = {
   setYX1Qnty: React.Dispatch<React.SetStateAction<number>>;
   setYX1Price: React.Dispatch<React.SetStateAction<number>>;
   isShowen: boolean;
-  setIsShowen: React.Dispatch<React.SetStateAction<boolean>>
+  setIsShowen: React.Dispatch<React.SetStateAction<boolean>>;
+  producia: [];
+  setProducia: React.Dispatch<React.SetStateAction<prodType[]>>;
+};
+export type prodType = {
+  name: string;
+  id: number;
+  price: number;
+  img1: string;
+  quanatty: number;
 };

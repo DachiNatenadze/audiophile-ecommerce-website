@@ -14,9 +14,11 @@ import Items from "../components/Items";
 import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { prodType } from "../types";
 
 export default function ZX9Speaker() {
-  const { ZX9Price, ZX9Qnty, setZX9Qnty } = useContext(MyContext);
+  const { producia, setProducia, ZX9Price, ZX9Qnty, setZX9Qnty } =
+    useContext(MyContext);
   2;
   const handleDecrement = () => {
     // Ensure qnty doesn't go below 0
@@ -24,6 +26,29 @@ export default function ZX9Speaker() {
       setZX9Qnty(ZX9Qnty - 1);
     }
   };
+  function AddproducttoCart() {
+    const cartInstance = [...producia];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const inThecart: any = cartInstance.find((product: prodType) => {
+      return product.id === 6;
+    });
+    if (inThecart) {
+      inThecart.quanatty++;
+      setProducia(cartInstance);
+    } else {
+      setProducia((prev: prodType[]) => [
+        ...prev,
+        {
+          id: 6,
+          name: "YX9",
+          price: ZX9Price,
+          quanatty: 1,
+          img1: "/product-zx9-speaker/mobile/image-category-page-preview.jpg",
+        },
+      ]);
+    }
+
+  }
   return (
     <>
       <div className="bg-black flex justify-center items-center">
@@ -66,7 +91,9 @@ export default function ZX9Speaker() {
                 }}>
                 +
               </button>
-              <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0  text-[#FFF] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+              <button
+                onClick={AddproducttoCart}
+                className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0  text-[#FFF] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
                 ADD TO CART
               </button>
             </div>

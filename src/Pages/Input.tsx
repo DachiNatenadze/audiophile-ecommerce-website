@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import "./input.css";
+import Footer from "../components/Footer";
 
 export default function Input() {
   const [isShowed, setisShowed] = useState<boolean>(false);
@@ -90,7 +91,6 @@ export default function Input() {
                 name="payment"
                 onClick={Change}
                 className="form-radio text-orange-500"
-                
               />
               <span className="ml-8">e-Money</span>
             </label>
@@ -124,6 +124,7 @@ export default function Input() {
             ""
           )}
         </section>
+        <Footer />
       </main>
     </>
   );

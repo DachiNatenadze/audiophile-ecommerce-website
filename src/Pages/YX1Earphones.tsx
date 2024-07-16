@@ -14,9 +14,11 @@ import Items from "../components/Items";
 import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { prodType } from "../types";
 
 export default function YX1EarPhones() {
-  const { YX1Price, YX1Qnty, setYX1Qnty } = useContext(MyContext);
+  const { producia, setProducia, YX1Price, YX1Qnty, setYX1Qnty } =
+    useContext(MyContext);
   2;
   const handleDecrement = () => {
     // Ensure qnty doesn't go below 0
@@ -24,6 +26,29 @@ export default function YX1EarPhones() {
       setYX1Qnty(YX1Qnty - 1);
     }
   };
+  function AddproducttoCart() {
+    const cartInstance = [...producia];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const inThecart: any = cartInstance.find((product: prodType) => {
+      return product.id === 6;
+    });
+    if (inThecart) {
+      inThecart.quanatty++;
+      setProducia(cartInstance);
+    } else {
+      setProducia((prev: prodType[]) => [
+        ...prev,
+        {
+          id: 6,
+          name: "YX1",
+          price: YX1Price,
+          quanatty: 1,
+          img1: "/product-yx1-earphones/mobile/image-category-page-preview.jpg",
+        },
+      ]);
+    }
+  }
+
   return (
     <>
       <div className="bg-black flex justify-center items-center">
@@ -66,7 +91,9 @@ export default function YX1EarPhones() {
                 }}>
                 +
               </button>
-              <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0  text-[#FFF] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+              <button
+                onClick={AddproducttoCart}
+                className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0  text-[#FFF] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
                 ADD TO CART
               </button>
             </div>
