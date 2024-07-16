@@ -73,7 +73,7 @@ export default function YX1EarPhones() {
               cancellation feature.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
-              ${YX1Price}
+            ${YX1Price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
             </h2>
             <div className="">
               <button

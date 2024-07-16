@@ -47,7 +47,6 @@ export default function ZX9Speaker() {
         },
       ]);
     }
-
   }
   return (
     <>
@@ -73,7 +72,9 @@ export default function ZX9Speaker() {
               practical audio setups.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
-              ${ZX9Price}
+              <span>
+                ${ZX9Price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+              </span>
             </h2>
             <div className="">
               <button

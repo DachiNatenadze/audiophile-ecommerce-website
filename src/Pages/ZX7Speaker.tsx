@@ -71,7 +71,11 @@ export default function ZX7Speaker() {
               the top of the line powered speakers for home or studio use.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
-              ${ZX7Price}
+              $
+              {ZX7Price.toLocaleString("en-US", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
             </h2>
             <div className="">
               <button

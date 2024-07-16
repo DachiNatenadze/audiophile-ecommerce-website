@@ -70,7 +70,7 @@ export default function XX99MarkIIProducts() {
               balanced depth and precision of studio-quality sound.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase">
-              ${XX99Price}
+            ${XX99Price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
             </h2>
             <div className="">
               <button

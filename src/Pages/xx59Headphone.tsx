@@ -47,7 +47,11 @@ export default function XX59Headphone() {
               wireless headset is a brilliant companion at home or on the move.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
-              ${XX59Price}
+              $
+              {XX59Price.toLocaleString("en-US", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
             </h2>
             <div className="">
               <button
