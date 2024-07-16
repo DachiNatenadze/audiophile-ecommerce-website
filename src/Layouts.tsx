@@ -8,7 +8,7 @@ import XX99MarkIIProducts from "./Pages/XX99MarkIIProducts";
 import XX99MarkIProducts from "./Pages/XX99MarkIProduct";
 import XX59Headphone from "./Pages/xx59Headphone";
 
-import { ProductsType } from "./types";
+import { prodType, ProductsType } from "./types";
 import ZX9Speaker from "./Pages/ZX9Speaker";
 import ZX7Speaker from "./Pages/ZX7Speaker";
 import YX1EarPhones from "./Pages/YX1Earphones";
@@ -59,7 +59,7 @@ export default function Layouts() {
   const [YX1Price, setYX1Price] = useState<number>(599);
   const [YX1Qnty, setYX1Qnty] = useState<number>(0);
   const [isShowen, setIsShowen] = useState<boolean>(false);
-  const [producia, setProducia] = useState<[]>([]);
+  const [producia, setProducia] = useState<prodType[]>([]);
 
   return (
     <>
