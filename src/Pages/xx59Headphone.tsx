@@ -14,6 +14,7 @@ import Items from "../components/Items";
 import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import Cart from "../components/Cart";
 
 export default function XX59Headphone() {
   const { XX59qnty, setXX59qnty, XX59Price } = useContext(MyContext);
@@ -26,6 +27,7 @@ export default function XX59Headphone() {
   };
   return (
     <>
+      <Cart />
       <div className="bg-black flex justify-center items-center">
         <Header />
       </div>

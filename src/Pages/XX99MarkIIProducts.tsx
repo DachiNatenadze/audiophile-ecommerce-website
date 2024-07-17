@@ -14,6 +14,7 @@ import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { prodType } from "../types";
+import Cart from "../components/Cart";
 
 export default function XX99MarkIIProducts() {
   const { producia, setProducia, XX99Price, XX99qnty, setXX99qnty } =
@@ -49,6 +50,7 @@ export default function XX99MarkIIProducts() {
   }
   return (
     <>
+      <Cart />
       <div className="bg-black">
         <Header />
       </div>

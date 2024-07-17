@@ -73,14 +73,16 @@ export default function Items() {
 
         <div className="flex flex-col justify-center items-center text-center mt-[36px]">
           <div>
-            <img
-              src={Earphone}
-              alt=""
-              className="w-[150px] h-[150px] mb-[5px]"
-            />
-            <h2 className="text-[#000] text-center font-[Manrope] text-[15px] not-italic font-bold leading-[normal] tracking-[1.071px] uppercase">
-              Earphone
-            </h2>
+            <Link to={"/Earphones"}>
+              <img
+                src={Earphone}
+                alt=""
+                className="w-[150px] h-[150px] mb-[5px]"
+              />
+              <h2 className="text-[#000] text-center font-[Manrope] text-[15px] not-italic font-bold leading-[normal] tracking-[1.071px] uppercase">
+                Earphone
+              </h2>
+            </Link>
           </div>
           <div className="flex flex-row items-center justify-center mt-[18px] gap-3">
             <Link to={"/Earphones"}>

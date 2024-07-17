@@ -15,6 +15,7 @@ import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { prodType } from "../types";
+import Cart from "../components/Cart";
 
 export default function ZX9Speaker() {
   const { producia, setProducia, ZX9Price, ZX9Qnty, setZX9Qnty } =
@@ -50,6 +51,7 @@ export default function ZX9Speaker() {
   }
   return (
     <>
+      <Cart />
       <div className="bg-black flex justify-center items-center">
         <Header />
       </div>

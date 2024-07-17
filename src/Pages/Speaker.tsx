@@ -4,10 +4,13 @@ import ZX7Speaker from "/product-zx7-speaker/mobile/image-category-page-preview.
 import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import Items from "../components/Items";
+import Cart from "../components/Cart";
+import { Link } from "react-router-dom";
 
 export default function Speaker() {
   return (
     <>
+      <Cart />
       <main>
         <header className="bg-black pb-[33px]">
           <Header />
@@ -34,9 +37,11 @@ export default function Speaker() {
               connectivity -- creating new possibilities for more pleasing and
               practical audio setups.
             </p>
-            <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              See Product
-            </button>
+            <Link to={"/ZX9Speaker"}>
+              <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+                See Product
+              </button>
+            </Link>
           </div>
           <div className="flex flex-col justify-center items-center mt-[120px] mb-[44px]">
             <img
@@ -53,9 +58,11 @@ export default function Speaker() {
               represents the top of the line powered speakers for home or studio
               use.
             </p>
-            <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              See Product
-            </button>
+            <Link to={"/ZX7Speaker"}>
+              <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+                See Product
+              </button>
+            </Link>
           </div>
           <div className="mb-[120px]">
             <Items />

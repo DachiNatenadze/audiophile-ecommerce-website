@@ -8,7 +8,7 @@ export default function Menuburger() {
   return (
     <>
       {isShowen ? (
-        <main className="absolute top-[140px] left-[50%] right-[50%] bg-black z-10">
+        <main className="absolute w-full left-[0%] right-[0%] bg-[#FFF] z-10">
           <div className="w-full h-[750px] flex-shrink-0 rounded-tl-none rounded-br-[8px] rounded-tr-none rounded-bl-[8px] bg-[#FFF] flex flex-col justify-center items-center">
             <div className="">
               <Items />

@@ -15,6 +15,7 @@ import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { prodType } from "../types";
+import Cart from "../components/Cart";
 
 export default function YX1EarPhones() {
   const { producia, setProducia, YX1Price, YX1Qnty, setYX1Qnty } =
@@ -51,6 +52,8 @@ export default function YX1EarPhones() {
 
   return (
     <>
+      {" "}
+      <Cart />
       <div className="bg-black flex justify-center items-center">
         <Header />
       </div>
@@ -73,7 +76,11 @@ export default function YX1EarPhones() {
               cancellation feature.
             </p>
             <h2 className="text-[#000] font-[Manrope] text-[18px] mt-[24px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mb-[32px]">
-            ${YX1Price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+              $
+              {YX1Price.toLocaleString("en-US", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
             </h2>
             <div className="">
               <button

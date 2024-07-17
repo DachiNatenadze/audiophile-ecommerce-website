@@ -4,6 +4,7 @@ import "./input.css";
 import Footer from "../components/Footer";
 import { prodType } from "../types";
 import { MyContext } from "../Layouts";
+import Cart from "../components/Cart";
 
 export default function Input() {
   const { producia } = useContext(MyContext);
@@ -23,6 +24,7 @@ export default function Input() {
   const grandTotal = total + shipping + vat;
   return (
     <>
+      <Cart />
       <div className="bg-black">
         <Header />
       </div>

@@ -3,10 +3,13 @@ import yx1Earphones from "/product-yx1-earphones/mobile/image-category-page-prev
 import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
 import Items from "../components/Items";
+import Cart from "../components/Cart";
+import { Link } from "react-router-dom";
 
 export default function Speaker() {
   return (
     <>
+      <Cart />
       <main>
         <header className="bg-black pb-[33px]">
           <Header />
@@ -33,9 +36,11 @@ export default function Speaker() {
               sound even in noisy environments with its active noise
               cancellation feature.
             </p>
+            <Link to={"/YX1Earphones"}>
             <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
               See Product
             </button>
+            </Link>
           </div>
           <div className="mb-[120px]">
             <Items />

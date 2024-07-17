@@ -5,10 +5,13 @@ import xx55Head from "/product-xx59-headphones/mobile/image-category-page-previe
 import Items from "../components/Items";
 import AboutComoany from "../components/AboutComoany";
 import Footer from "../components/Footer";
+import Cart from "../components/Cart";
+import { Link } from "react-router-dom";
 
 export default function Headphones() {
   return (
     <>
+      <Cart />
       <main>
         <header className="bg-black pb-[33px]">
           <Header />
@@ -34,9 +37,11 @@ export default function Headphones() {
               It redefines your premium headphone experience by reproducing the
               balanced depth and precision of studio-quality sound.
             </p>
-            <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              See Product
-            </button>
+            <Link to={"/XX99Mark2Product"}>
+              <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+                See Product
+              </button>
+            </Link>
           </div>
           <div className="flex flex-col justify-center items-center mt-[120px]">
             <img
@@ -53,9 +58,11 @@ export default function Headphones() {
               mixing engineers, and music aficionados alike in studios and on
               the go.
             </p>
-            <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              See Product
-            </button>
+            <Link to={"/XX99Mark1Product"}>
+              <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+                See Product
+              </button>
+            </Link>
           </div>
           <div className="flex flex-col justify-center items-center mt-[120px] mb-[120px]">
             <img
@@ -71,9 +78,11 @@ export default function Headphones() {
               tastes with the XX59 headphones. The stylish yet durable versatile
               wireless headset is a brilliant companion at home or on the move.
             </p>
-            <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
-              See Product
-            </button>
+            <Link to={"/XX59Headphone"}>
+              <button className="bg-[#D87D4A] w-[160px] h-[48px] flex-shrink-0 text-[#FFF] font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+                See Product
+              </button>
+            </Link>
           </div>
           <Items />
           <AboutComoany />
