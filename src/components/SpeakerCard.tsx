@@ -5,7 +5,7 @@ export default function SpeakerCard() {
     <>
       <main>
         <div className="flex justify-center items-center mt-[120px]">
-          <div className="w-[327px] h-[600px] flex-shrink-0 rounded-[8px] bg-[#D87D4A] flex flex-col items-center px-[24px]">
+          <div className="max-w-[327px] max-sm:w-full h-[600px] flex-shrink-0 rounded-[8px] bg-[#D87D4A] flex flex-col items-center px-[24px]">
             <img src={SpeakerPic} alt="" className="max-sm:mt-[55px]" />
             <h2 className="mt-[33px] mb-[24px] text-[#FFF] text-center font-[Manrope] text-[36px] not-italic font-bold leading-[40px] uppercase max-w-[200px]">
               ZX9 SPEAKER

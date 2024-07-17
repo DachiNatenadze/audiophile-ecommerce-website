@@ -4,12 +4,12 @@ export default function AboutComoany() {
   return (
     <>
       <main>
-        <div className="flex justify-center items-center">
+        <div className="flex w-full justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <img
               src={autohor}
               alt=""
-              className="rounded-[8px] bg-[#F1F1F1] w-[327px] h-[300px]"
+              className="rounded-[8px] bg-[#F1F1F1]  min-sm:w-full h-[300px]"
             />
             <h2 className="text-[#000] text-center font-[Manrope] text-[28px] not-italic font-bold leading-[normal] tracking-[1px] uppercase mt-[40px] max-w-[300px] mb-[32px]">
               Bringing you the{" "}

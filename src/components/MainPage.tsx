@@ -12,12 +12,12 @@ export default function MainPage() {
   console.log("rendered");
   return (
     <>
-      <main className="w-ful">
+      <main className="w-full">
         <div className="w-full h-full bg-headerBackground pb-[142px] bg-center bg-no-repeat bg-cover">
           <Header />
+        <Cart />
           <HeadphoneInfo />
         </div>
-        <Cart/>
         <Items />
         <SpeakerCard />
         <Zxx7Speaker />

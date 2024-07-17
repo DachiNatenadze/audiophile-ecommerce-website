@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Items() {
   return (
     <>
-      <main>
+      <main className="">
         <div className="flex flex-col justify-center items-center text-center">
           <div>
             <img

@@ -44,6 +44,8 @@ export const MyContext = createContext<ProductsType>({
   setProducia: () => {},
   isEmpty: 0,
   setIsEmpty: () => {},
+  isShowenCart: false,
+  setIsShowenCart : () => {}
 });
 
 export default function Layouts() {
@@ -63,6 +65,8 @@ export default function Layouts() {
   const [isShowen, setIsShowen] = useState<boolean>(false);
   const [producia, setProducia] = useState<prodType[]>([]);
   const [isEmpty, setIsEmpty] = useState<number>(0);
+  const [isShowenCart, setIsShowenCart] = useState<boolean>(false);
+
 
 
   return (
@@ -71,6 +75,8 @@ export default function Layouts() {
         <MyContext.Provider
           value={{
             isEmpty,
+            isShowenCart,
+            setIsShowenCart,
             setIsEmpty,
             producia,
             setProducia,

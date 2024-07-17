@@ -4,7 +4,7 @@ import { prodType } from "../types";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
-  const { producia, setProducia, isEmpty, isShowen } = useContext(MyContext);
+  const { producia, setProducia, isEmpty,isShowenCart } = useContext(MyContext);
 
   function incrementProductQuantity(id: number) {
     const updatedProducts = producia.map((product) =>
@@ -32,7 +32,7 @@ export default function Cart() {
 
   return (
     <>
-      {isShowen ? (
+      {isShowenCart ? (
         <main className="absolute top-[140px] left-[50%] right-[50%] bg-black">
           <div className="flex flex-col justify-center items-center">
             <div className="w-[327px]  h-full flex-shrink-0 rounded-[8px] bg-[#FFF]">
