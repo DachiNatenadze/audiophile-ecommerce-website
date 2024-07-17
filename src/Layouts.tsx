@@ -41,7 +41,9 @@ export const MyContext = createContext<ProductsType>({
   isShowen: false,
   setIsShowen: () => {},
   producia: [],
-  setProducia: () => {}
+  setProducia: () => {},
+  isEmpty: 0,
+  setIsEmpty: () => {},
 });
 
 export default function Layouts() {
@@ -60,12 +62,16 @@ export default function Layouts() {
   const [YX1Qnty, setYX1Qnty] = useState<number>(0);
   const [isShowen, setIsShowen] = useState<boolean>(false);
   const [producia, setProducia] = useState<prodType[]>([]);
+  const [isEmpty, setIsEmpty] = useState<number>(0);
+
 
   return (
     <>
       <BrowserRouter>
         <MyContext.Provider
           value={{
+            isEmpty,
+            setIsEmpty,
             producia,
             setProducia,
             setIsShowen,

@@ -19,7 +19,7 @@ export default function XX99MarkIIProducts() {
   const { producia, setProducia, XX99Price, XX99qnty, setXX99qnty } =
     useContext(MyContext);
   const handleDecrement = () => {
-    // Ensure qnty doesn't go below 0
+    // Ensure qnty doesn't go below 1
     if (XX99qnty > 0) {
       setXX99qnty(XX99qnty - 1);
     }

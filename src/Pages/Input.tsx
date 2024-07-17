@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Header from "../components/Header";
 import "./input.css";
 import Footer from "../components/Footer";
+import { prodType } from "../types";
+import { MyContext } from "../Layouts";
 
 export default function Input() {
+  const { producia } = useContext(MyContext);
   const [isShowed, setisShowed] = useState<boolean>(false);
   function Change() {
     setisShowed(!isShowed);
@@ -11,6 +14,13 @@ export default function Input() {
   function Cash() {
     setisShowed(false);
   }
+  const total = producia.reduce(
+    (acc, item) => acc + item.price * item.quanatty,
+    0
+  );
+  const shipping = 50; // Assuming a flat shipping rate
+  const vat = total * 0.2; // Assuming VAT is 20%
+  const grandTotal = total + shipping + vat;
   return (
     <>
       <div className="bg-black">
@@ -84,7 +94,7 @@ export default function Input() {
             payment details
           </h2>
           <h2 className="mb-[4px]">Payment Method</h2>
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-2 mb-[40px]">
             <label className="flex items-center border-2 rounded-lg p-4 cursor-pointer">
               <input
                 type="radio"
@@ -106,7 +116,7 @@ export default function Input() {
             </label>
           </div>
           {isShowed ? (
-            <div className="mt-[32px]">
+            <div className="mt-[32px] mb-[40px]">
               <h2 className="mb-[9x]">e-Money Number</h2>
               <input
                 type="number"
@@ -122,6 +132,107 @@ export default function Input() {
             </div>
           ) : (
             ""
+          )}
+          <div className="">
+            <div className="">
+              {producia.length === 0 ? (
+                ""
+              ) : (
+                <h2 className="text-[#000] font-[Manrope] text-[18px] not-italic font-bold leading-[normal] tracking-[1.286px] uppercase mt-[100px] mb-[32px]">
+                  Summary
+                </h2>
+              )}
+              {producia.map((item: prodType, index) => (
+                <div
+                  key={index}
+                  className="flex justify-between items-center ga-[32px]">
+                  <div className="flex items-start justify-start">
+                    <img
+                      className="h-[64px] w-[64px] rounded-[8px] bg-[#F1F1F1] mr-[20px]"
+                      src={item.img1}
+                      alt=""
+                    />
+                    <div className="flex flex-col mt-[7px]">
+                      <h2 className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px]">
+                        {item.name}
+                      </h2>
+                      <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] opacity-50">
+                        $
+                        {item.price.toLocaleString("en-US", {
+                          minimumFractionDigits: 0,
+                          maximumFractionDigits: 0,
+                        })}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex justify-center items-center">
+                    <span className="text-[#000] text-right font-[Manrope] text-[15px] not-italic font-bold leading-[25px] opacity-50 mr-[24px]">
+                      x{item.quanatty}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {producia.length === 0 ? (
+            ""
+          ) : (
+            <div className="mt-[32px]">
+              <div className="flex justify-between items-center px-6">
+                <h2 className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px]">
+                  Total
+                </h2>
+                <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] opacity-50">
+                  $
+                  {total.toLocaleString("en-US", {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  })}
+                </span>
+              </div>
+              <div className="flex justify-between items-center px-6 mt-[16px]">
+                <h2 className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px]">
+                  Shipping
+                </h2>
+                <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] opacity-50">
+                  $
+                  {shipping.toLocaleString("en-US", {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  })}
+                </span>
+              </div>
+              <div className="flex justify-between items-center px-6 mt-[16px]">
+                <h2 className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px]">
+                  VAT (20%)
+                </h2>
+                <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] opacity-50">
+                  $
+                  {vat.toLocaleString("en-US", {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  })}
+                </span>
+              </div>
+              <div className="flex flex-col justify-between items-center px-6 mt-[16px] w-full">
+                <div className="flex flex-row justify-between items-center w-full">
+                  <h2 className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px]">
+                    Grand Total
+                  </h2>
+                  <span className="text-[#000] font-[Manrope] text-[15px] not-italic font-bold leading-[25px] opacity-50">
+                    $
+                    {grandTotal.toLocaleString("en-US", {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 0,
+                    })}
+                  </span>
+                </div>
+                <button className="w-full h-[48px] mt-[32px] flex-shrink-0 mb-[31px] bg-[#D87D4A] text-[#FFF] text-center font-[Manrope] text-[13px] not-italic font-bold leading-[normal] tracking-[1px] uppercase">
+                CONTINUE & PAY
+                </button>
+              </div>
+            </div>
           )}
         </section>
         <Footer />

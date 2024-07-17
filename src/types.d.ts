@@ -27,6 +27,8 @@ export type ProductsType = {
   setIsShowen: React.Dispatch<React.SetStateAction<boolean>>;
   producia: prodType[];
   setProducia: React.Dispatch<React.SetStateAction<prodType[]>>;
+  isEmpty: number;
+  setIsEmpty: React.Dispatch<React.SetStateAction<number>>;
 };
 export type prodType = {
   name: string;
