@@ -1,22 +1,31 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MyContext } from "../Layouts";
-import Menuburger from "./Menuburger";
+import Cart from "./Cart";
 export default function Header() {
   const { isShowen, setIsShowen } = useContext(MyContext);
-  function Cart() {
+
+  // Rename the local function to avoid conflict with the Cart component
+  function toggleCartVisibility() {
     setIsShowen((prevIsShowen) => !prevIsShowen);
   }
+
+
+  function toggleBurgerMenu() {
+    setIsShowen(!isShowen);
+  }
+
   return (
     <>
       <header className="w-full border-b border-[#FFF] border-opacity-15 justify-center items-center">
         <div className="flex flex-row justify-between items-center max-sm:pt-[37px] max-sm:px-[24px] max-sm:mb-[35px]">
           <svg
-            onClick={Cart}
+            onClick={toggleCartVisibility}
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="15"
             viewBox="0 0 16 15"
-            fill="none">
+            fill="none"
+          >
             <rect width="16" height="3" fill="white" />
             <rect y="6" width="16" height="3" fill="white" />
             <rect y="12" width="16" height="3" fill="white" />
@@ -27,7 +36,8 @@ export default function Header() {
             width="143"
             height="25"
             viewBox="0 0 143 25"
-            fill="none">
+            fill="none"
+          >
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -36,11 +46,13 @@ export default function Header() {
             />
           </svg>
           <svg
+            onClick={toggleBurgerMenu}
             xmlns="http://www.w3.org/2000/svg"
             width="23"
             height="20"
             viewBox="0 0 23 20"
-            fill="none">
+            fill="none"
+          >
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -49,13 +61,6 @@ export default function Header() {
             />
           </svg>
         </div>
-        {isShowen ? (
-          <div className="absolute w-full z-10">
-            <Menuburger />
-          </div>
-        ) : (
-          ""
-        )}
       </header>
     </>
   );
